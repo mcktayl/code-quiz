@@ -6,29 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
-    <link rel='reset' href='./assets/css/reset.css'>
+    <link rel='stylesheet' href='./assets/css/reset.css'>
+    <link rel='stylesheet' href='./assets/css/style.css'>
 </head>
 
 <body>
     <!-- Header containing high score link and time remaining -->
     <header>
-        <h1 id='viewHighScores'>View High Scores</h1>
-        <h1 id='timeRemaining'>Time Remaining</h1>
+        <a id='viewHighScores' href='#'>View High Scores</a>
+        <span id='timeRemaining'>Time Remaining: <span id='timeDisplay'>0</span></span>
     </header>
 
     <!-- Main element containing description and quiz box -->
-    <main>
-        <!-- Description and button to start quiz -->
-        <div id='startingBox'>
-            <h2>Coding Quiz</h2>
+    <main class='container'>
+        <!-- Section containing description and button to start quiz -->
+        <section class='page' id='startingBox'>
+            <h1>Coding Quiz</h1>
             <p>Would you like to take a quiz?</p>
-            <button id='startQuiz'>Start Quiz</button>
-        </div>
-        <!-- Element containing quiz question and options -->
-        <div id='quizBox'>
-            <div id='question'></div>
+            <button class='btn' id='startQuiz'>Start Quiz</button>
+        </section>
+        <!-- Section containing quiz question, options, and result -->
+        <section class='pageHidden' id='quizBox'>
+            <h2 id='question'></h2>
             <div id='answers'></div>
-        </div>
+            <div id='result'></div>
+        </section>
+        <!-- Section containing box to submit score with initials -->
+        <section class='pageHidden' id='submitScoreBox'>
+            <h2>Finished!</h2>
+            <p>Your final score is <span id='scoreDisplay'></span>.</p>
+            <br>
+            <p>Enter initials:
+                <input type='text' name='initials' id='initialsInput'>
+                <button class='btn' id='submitInitials'>Submit</button>
+            </p>
+        </section>
+        <!-- Section containing box for high scores -->
+        <section class='pageHidden' id='highScoresPage'>
+            <h2>Highscores</h2>
+            <div id='highScoreList'></div>
+            <button class='btn' id='returnToStart'>Take Quiz Again</button>
+            <button class='btn' id='clearHighScores'>Clear Highscores</button>
+        </section>
         <script src='./assets/js/script.js'></script>
     </main>
 </body>
