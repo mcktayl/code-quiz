@@ -14,21 +14,20 @@ var highScoreList = document.getElementById('highScoreList');
 var returnToStartButton = document.getElementById ('returnToStart');
 var clearHighScoresButton = document.getElementById('clearHighScores');
 
-// Declaring question set as an array within an object
+// Variable containing question set
 var questionSet = [
     {
-        question: 'Which of the following operators means "and"?',
-        answers: {
-            a: '>=',
-            b: '!',
-            c: '||',
-            d: '&&'
-        },
-        correctAnswer: 'd'
-    },
+        'question': 'Which of the following operators means "and"?',
+        'answers': ['>=', '!', '||', '&&'],
+        'correctAnswer': 4
+    }, {
+        'question': 'Which of the following HTML tags creates a numbered list?',
+        'answers': ['ul', 'ol', 'li', 'nl'],
+        'correctAnswer': 2
+    }, {
+        'question': 'Which of the following is the innermost element of the CSS box model?',
+        'answers': ['margin', 'border', 'padding', 'content'],
+        'correctAnswer': 4
+    }
 ]
-
-for(var i=0; i < questionSet.length; i++){
-    
-}
 
