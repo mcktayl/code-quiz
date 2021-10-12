@@ -1,13 +1,18 @@
 // Declaring variables
-var startingBoxEl = document.getElementById('startingBox');
-var quizBoxEl = document.getElementById('quizBox');
+var viewHighScoresLink = document.getElementById ('viewHighScores');
+var timeRemainingDisplay = document.getElementById ('timeDisplay');
+var startingBox = document.getElementById('startingBox');
+var startButton = document.getElementById('startQuiz');
+var quizBox = document.getElementById('quizBox');
 var questionEl = document.getElementById('question');
 var answerEl = document.getElementById('answers');
 var resultEl = document.getElementById('result');
-var startButton = document.getElementById('startQuiz');
-
-var currentQuestion = 0;
-var score = 0;
+var scoreDisplay = document.getElementById('scoreDisplay');
+var initialsInput = document.getElementById('initialsInput');
+var submitInitialsButton = document.getElementById('submitInitials');
+var highScoreList = document.getElementById('highScoreList');
+var returnToStartButton = document.getElementById ('returnToStart');
+var clearHighScoresButton = document.getElementById('clearHighScores');
 
 // Declaring question set as an array within an object
 var questionSet = [
@@ -23,11 +28,7 @@ var questionSet = [
     },
 ]
 
-// Declaring functions
-function startQuiz()
-
-function showQuestions() {
-
+for(var i=0; i < questionSet.length; i++){
+    
 }
 
-function showResults()
