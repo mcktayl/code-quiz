@@ -25,7 +25,19 @@ If you used any third-party assets that require attribution, list the creators w
 If you followed tutorials, include links to those here as well.
 
 Tutorials used:
-(https://jsdoc.app/tags-param.html)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+(https://www.w3schools.com/jsref/jsref_now.asp)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+(https://www.w3schools.com/jsref/jsref_foreach.asp)
+(https://www.w3schools.com/jsref/met_win_clearinterval.asp)
+(https://medium.com/nerd-for-tech/var-let-and-const-in-javascript-15e41cf90f01)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
+(https://www.w3schools.com/js/js_loop_while.asp)
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 ## License
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).

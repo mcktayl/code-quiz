@@ -139,15 +139,14 @@ var randomizedQuestions;
 function displayQuestionsPage () {
     displayPage('quizBox')
 
-    // Sets up the question numbers above the quiz
-    questionEl.innerHTML = '';
+    // // Sets up the question numbers above the quiz
+    // questionEl.innerHTML = '';
 
-    for (var i = 0; i < questionSet.length; i++) {
-        const element = questionSet[i];
-        var el = document.createElement('span')
-        el.textContent = i + 1
-        questionEl.appendChild(el)
-    }
+    // for (var i = 0; i < questionSet.length; i++) {
+    //     const element = questionSet[i];
+    //     var el = document.createElement('span')
+    //     el.textContent = i + 1
+    //     questionEl.appendChild(el)
 
     // Creates a randomly sorted clone of the questions array
     randomizedQuestions = randomizeArray(questionSet)
@@ -163,9 +162,76 @@ function displayQuestionsPage () {
     displayNextQuestion()
 }
 
+// Function that displays next question
+function displayNextQuestion() {
+    if (nextQuestionIndex < questionSet.length) {
+        const question = randomizedQuestions[nextQuestionIndex].question
+        const answers = randomizedQuestions[nextQuestionIndex].answers
+        const randomizedAnswers = randomizeArray(answers)
+        const correctResult = answers[randomizedQuestions[nextQuestionIndex].correctAnswer]
 
+        questionEl.textContent = question
+        answerEl.innerHTML = ''
+        resultEl.textContent = ''
 
-// Starts the timer 
-startTimer()
+        for (var i = 0; i < randomizedAnswers.length; i++) {
+            let answer = randomizedAnswers[i]
+            let button = document.createElement('button')
+            button.classList.add('answer')
+            if (answer == correctResult)
+                button.classList.add('correct')
+            button.textContent = '${i + 1}. ${answer}'
+            answerEl.appendChild(button)
+        }
 
-//
+        nextQuestionIndex++
+    } else {
+        clearInterval(timer)
+        displayGetNamePage()
+    }
+}
+
+// Function that displays record score page
+function displayGetNamePage() {
+    displayPage('submitScoreBox')
+    if (remainingTime < 0) remainingTime = 0
+    timeRemainingDisplay.textContent = formatSeconds(remainingTime)
+    scoreDisplay.textContent = score
+}
+
+// Function that displays the high scores page
+function displayHighScorePage () {
+    displayPage('highScoresPage')
+
+    highScoreList.innerHTML = ''
+
+    clearInterval(timer)
+
+    let highScores = JSON.parse(localStorage.getItem('highscores'))
+
+    let i = 0
+    for (const key in highScores) {
+        i++
+        let highscore = highScores[key]
+        var el = document.createElement('div')
+        let initials = highscore.initials.padEnd(3, ' ')
+        let playerScore = highscore.score.toString().padStart(3, ' ')
+        let timeRemaining = formatSeconds(highscore.timeRemaining)
+        el.textContent = '${i}. ${initials} - Score: ${playerScore} - Time: ${timeRemaining}'
+        highScoreList.appendChild(el)
+    }
+}
+
+// Function to take any given array and return a randomly sorted clone
+function randomizeArray(array) {
+    clone = [...array]
+    output = []
+
+    while (clone.length > 0) {
+        let r = Math.floor(Math.random() * clone.length);
+        let i = clone.splice(r, 1)[0]
+        output.push(i)
+    }
+
+    return output
+}
