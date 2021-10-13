@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel='stylesheet' href='./assets/css/reset.css'>
+    <link rel='stylesheet' href='./assets/css/main.css'>
     <link rel='stylesheet' href='./assets/css/style.css'>
 </head>
 
@@ -26,13 +27,13 @@
             <button class='btn' id='startQuiz'>Start Quiz</button>
         </section>
         <!-- Section containing quiz question, options, and result -->
-        <section class='pageHidden' id='quizBox'>
+        <section class='page hidden' id='quizBox'>
             <h2 id='question'></h2>
             <div id='answers'></div>
             <div id='result'></div>
         </section>
         <!-- Section containing box to submit score with initials -->
-        <section class='pageHidden' id='submitScoreBox'>
+        <section class='page hidden' id='submitScoreBox'>
             <h2>Finished!</h2>
             <p>Your final score is <span id='scoreDisplay'></span>.</p>
             <br>
@@ -42,7 +43,7 @@
             </p>
         </section>
         <!-- Section containing box for high scores -->
-        <section class='pageHidden' id='highScoresPage'>
+        <section class='page hidden' id='highScoresPage'>
             <h2>Highscores</h2>
             <div id='highScoreList'></div>
             <button class='btn' id='returnToStart'>Take Quiz Again</button>
