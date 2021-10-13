@@ -6,9 +6,10 @@ My goal was to build a timed multiple choice quiz that advances upon selection o
 
 This project deepened my understanding of HTML, CSS, and Javascript.  The HTML element was built from scratch, which required me to wireframe a design and implement it through the use of descriptive class and id tags.  Creating the CSS stylesheet was an excellent opportunity to gain more experience with flex positioning and dimensions.  The Javascript included in this project required me to further my understanding of third party APIs, local storage, objects, arrays, functions, and listener events.
 
+Here is a link to my project: [https://mcktayl.github.io/code-quiz/](https://mcktayl.github.io/code-quiz/)
+
 ## Table of Contents
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -32,27 +33,42 @@ At the end of the quiz, the user is shown their score and prompted to enter thei
 After submitting their score or upon clicking the "View High Scores" link in the top left corner, the user is shown a list of high scores, sorted by score and then by time remaining upon completion.  The user can start the quiz again or clear the list.
 ![screenshot04](https://user-images.githubusercontent.com/91210267/137063868-ef0e5411-b807-4a5c-8162-8b25e7f2e66d.png)
 
-Video demonstration
+Video demonstration:
 https://user-images.githubusercontent.com/91210267/137063905-eebe562f-640a-4a98-9719-438ad6d03c6c.mp4
 
 
 ## Credits
 
 Tutorials used:
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-(https://www.w3schools.com/jsref/jsref_now.asp)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-(https://www.w3schools.com/jsref/jsref_foreach.asp)
-(https://www.w3schools.com/jsref/met_win_clearinterval.asp)
-(https://medium.com/nerd-for-tech/var-let-and-const-in-javascript-15e41cf90f01)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
-(https://www.w3schools.com/js/js_loop_while.asp)
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
-(https://stackoverflow.com/questions/3733227/javascript-seconds-to-minutes-and-seconds)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+[https://www.w3schools.com/jsref/jsref_now.asp](https://www.w3schools.com/jsref/jsref_now.asp)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+[https://www.w3schools.com/jsref/jsref_foreach.asp](https://www.w3schools.com/jsref/jsref_foreach.asp)
+
+[https://www.w3schools.com/jsref/met_win_clearinterval.asp](https://www.w3schools.com/jsref/met_win_clearinterval.asp)
+
+[https://medium.com/nerd-for-tech/var-let-and-const-in-javascript-15e41cf90f01](https://medium.com/nerd-for-tech/var-let-and-const-in-javascript-15e41cf90f01)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
+
+[https://www.w3schools.com/js/js_loop_while.asp](https://www.w3schools.com/js/js_loop_while.asp)
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+[https://stackoverflow.com/questions/3733227/javascript-seconds-to-minutes-and-seconds](https://stackoverflow.com/questions/3733227/javascript-seconds-to-minutes-and-seconds)
+
 
 ## License
 
