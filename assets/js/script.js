@@ -20,20 +20,44 @@ var questionSet = [
     {
         'question': 'Which of the following operators means "and"?',
         'answers': ['>=', '!', '||', '&&'],
-        'correctAnswer': 4
+        'correctAnswer': 3
     }, {
         'question': 'Which of the following HTML tags creates a numbered list?',
         'answers': ['ul', 'ol', 'li', 'nl'],
-        'correctAnswer': 2
+        'correctAnswer': 1
     }, {
         'question': 'Which of the following is the outermost element of the CSS box model?',
         'answers': ['margin', 'border', 'padding', 'content'],
+        'correctAnswer': 0
+    }, {
+        'question': 'Which of the following properties sets the distance between lines of text?',
+        'answers': ['line-height', 'font-size', 'height', 'font-family'],
+        'correctAnswer': 0
+    }, {
+        'question': 'Which of the following attributes specifies the alternative text for an image in HTML?',
+        'answers': ['text', 'img', 'src', 'alt'],
+        'correctAnswer': 3
+    }, {
+        'question': 'Which of the following notations correctly selects an id tag in CSS?',
+        'answers': ['.', '#', '$', '*'],
+        'correctAnswer': 1
+    }, {
+        'question': 'Which of the following is not an appropriate position for CSS?',
+        'answers': ['relative', 'criss-cross', 'absolute', 'fixed'],
+        'correctAnswer': 1
+    }, {
+        'question': 'Which of the following is used to make responsive designs in CSS?',
+        'answers': ['@media', '@responsive', '@design', '@mobile'],
+        'correctAnswer': 0
+    }, {
+        'question': 'Which of the following CSS properties stretches a photo vertically or horizontally?',
+        'answers': ['rotate', 'scale', 'stretch', 'skew'],
         'correctAnswer': 1
     }
 ]
 
 // Variables for score tracking and time remaining
-const startingTime = questionSet.length * 8;
+const startingTime = questionSet.length * 10;
 const timePenalty = 10;
 var remainingTime;
 var timer;
@@ -53,11 +77,9 @@ function init() {
             var button = event.target
             if (button.classList.contains('correct')) {
                 resultEl.textContent = 'Correct!'
-                quizBox.children[nextQuestionIndex -1].classList.add('correct')
                 score++
             } else {
                 resultEl.textContent = 'Incorrect!'
-                quizBox.children[nextQuestionIndex -1].classList.add('incorrect')
                 remainingTime -= timePenalty
             }
             if (remainingTime > 0) displayNextQuestion ()
@@ -105,7 +127,7 @@ function init() {
             displayHighScorePage()
         }
     })
-    
+
     viewHighScoresLink.addEventListener('click', event => {
         event.preventDefault()
         displayHighScorePage()
@@ -174,9 +196,10 @@ function displayNextQuestion() {
         for (var i = 0; i < randomizedAnswers.length; i++) {
             let answer = randomizedAnswers[i]
             let button = document.createElement('button')
+
             button.classList.add('answer')
             if (answer == correctResult)
-                button.classList.add('correct')
+            button.classList.add('correct')
             button.textContent = `${i + 1}. ${answer}`
             answerEl.appendChild(button)
         }
