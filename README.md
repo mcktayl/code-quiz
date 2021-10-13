@@ -21,12 +21,20 @@ This project runs in the browser and requires no installation by the user.
 ## Usage
 
 The user is immediately prompted with a description of the quiz and the penalty for an incorrect answer.
+![screenshot01](https://user-images.githubusercontent.com/91210267/137063770-296bce82-2a4b-4db0-adba-2655b4d51de9.png)
 
 Once the user selects to start the quiz, they are shown a question with four options to choose from.  Selecting a correct answer increases their score by 1 and selecting an incorrect answer reduces their time remaining by 10 seconds.
+![screenshot02](https://user-images.githubusercontent.com/91210267/137063811-e15865a2-b420-4626-af1f-00be6721f73a.png)
 
 At the end of the quiz, the user is shown their score and prompted to enter their initials to save their score.
+![screenshot03](https://user-images.githubusercontent.com/91210267/137063860-21e5f500-3104-4686-b475-d273b1e16667.png)
 
 After submitting their score or upon clicking the "View High Scores" link in the top left corner, the user is shown a list of high scores, sorted by score and then by time remaining upon completion.  The user can start the quiz again or clear the list.
+![screenshot04](https://user-images.githubusercontent.com/91210267/137063868-ef0e5411-b807-4a5c-8162-8b25e7f2e66d.png)
+
+Video demonstration
+https://user-images.githubusercontent.com/91210267/137063905-eebe562f-640a-4a98-9719-438ad6d03c6c.mp4
+
 
 ## Credits
 
