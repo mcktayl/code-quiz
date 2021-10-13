@@ -222,7 +222,7 @@ function displayHighScorePage () {
     }
 }
 
-// Function to take any given array and return a randomly sorted clone
+// Function that will take any given array and return a randomly sorted clone
 function randomizeArray(array) {
     clone = [...array]
     output = []
@@ -234,4 +234,29 @@ function randomizeArray(array) {
     }
 
     return output
+}
+
+// Function that starts the count down timer
+function startTimer() {
+    remainingTime = startingTime
+    timeRemainingDisplay.textContent = formatSeconds(remainingTime)
+
+    timer = setInterval(function () {
+        remainingTime--
+
+        if (remainingTime < 0) {
+            clearInterval(timer)
+            displayGetNamePage()
+        } else {
+            timeRemainingDisplay.textContent = formatSeconds(remainingTime)
+        }
+
+    }, 1000)
+}
+
+// Function that converts seconds to a 'M:SS' format
+function formatSeconds(seconds) {
+    let m = Math.floor(seconds / 60).toString().padStart(2, ' ')
+    let s = (seconds % 60).toString().padStart(2, '0')
+    return '${m}:${s}'
 }

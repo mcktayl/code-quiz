@@ -38,6 +38,7 @@ Tutorials used:
 (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
 (https://www.w3schools.com/js/js_loop_while.asp)
 (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+(https://stackoverflow.com/questions/3733227/javascript-seconds-to-minutes-and-seconds)
 
 ## License
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
