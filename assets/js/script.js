@@ -44,7 +44,7 @@ function init() {
     // Event listener for when start button is pressed
     startButton.addEventListener('click', event => {
         event.preventDefault()
-        displayQuestionPage()
+        displayQuestionsPage()
     })
     // Event listener for when answer is chosen
     answerEl.addEventListener('click', function(event) {
@@ -105,6 +105,12 @@ function init() {
             displayHighScorePage()
         }
     })
+    
+    viewHighScoresLink.addEventListener('click', event => {
+        event.preventDefault()
+        displayHighScorePage()
+    })
+
     // Display the starting page
     displayStartingPage()
 }
@@ -139,15 +145,6 @@ var randomizedQuestions;
 function displayQuestionsPage () {
     displayPage('quizBox')
 
-    // // Sets up the question numbers above the quiz
-    // questionEl.innerHTML = '';
-
-    // for (var i = 0; i < questionSet.length; i++) {
-    //     const element = questionSet[i];
-    //     var el = document.createElement('span')
-    //     el.textContent = i + 1
-    //     questionEl.appendChild(el)
-
     // Creates a randomly sorted clone of the questions array
     randomizedQuestions = randomizeArray(questionSet)
 
@@ -180,7 +177,7 @@ function displayNextQuestion() {
             button.classList.add('answer')
             if (answer == correctResult)
                 button.classList.add('correct')
-            button.textContent = '${i + 1}. ${answer}'
+            button.textContent = `${i + 1}. ${answer}`
             answerEl.appendChild(button)
         }
 
@@ -217,7 +214,7 @@ function displayHighScorePage () {
         let initials = highscore.initials.padEnd(3, ' ')
         let playerScore = highscore.score.toString().padStart(3, ' ')
         let timeRemaining = formatSeconds(highscore.timeRemaining)
-        el.textContent = '${i}. ${initials} - Score: ${playerScore} - Time: ${timeRemaining}'
+        el.textContent = `${i}. ${initials} - Score: ${playerScore} - Time: ${timeRemaining}`
         highScoreList.appendChild(el)
     }
 }
@@ -258,5 +255,7 @@ function startTimer() {
 function formatSeconds(seconds) {
     let m = Math.floor(seconds / 60).toString().padStart(2, ' ')
     let s = (seconds % 60).toString().padStart(2, '0')
-    return '${m}:${s}'
+    return `${m}:${s}`
 }
+
+init()
