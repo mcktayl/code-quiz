@@ -1,28 +1,38 @@
-button {
-    background-color: #1f4a6d;
-    color: white;
-    padding: 0.5rem 0.75rem;
-    box-shadow: none;
-    border-radius: 0;
-    border: 0;
+/* Main elements */
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-a {
-    color: black
+body > * {
+    flex: 0 0 auto;
+    width: 90%;
 }
 
+main {
+    flex: 1 0 auto;
+    margin: auto;
+    max-width: 625px;
+    padding: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header content */
 header {
     display: inline-flex;
     justify-content: space-between;
     padding: 2rem;
 }
 
-main {
-    margin: auto;
-    max-width: 625px;
-    padding: 0.5rem;
+a {
+    color: black
 }
 
+/* Main text elements */
 main section h1 {
     font-size: 2rem;
     margin: 1rem 0;
@@ -38,12 +48,14 @@ main section p {
     margin: 1rem 0;
 }
 
+/* Starting page */
 main #startingBox #startButton {
     position: relative;
     left: 50%;
     transform: translate(-50%);
 }
 
+/* Quiz page */
 main #quizBox #answers button {
     margin: 0.1rem;
 }
@@ -52,6 +64,7 @@ main #quizBox #result {
     font-weight: 600;
 }
 
+/* Submit score page */
 main #submitScoreBox #scoreDisplay {
     font-weight: 600;
 }
@@ -70,6 +83,7 @@ main #submitScoreBox #initialsInput:focus {
     outline: none;
 }
 
+/* High scores page */
 main #highScoresPage #highScoreList div {
     padding: 0.2rem 0.5rem;
 }
@@ -82,6 +96,12 @@ main #highScoresPage #highScoreList div:nth-child(even) {
     background-color: rgba(31, 74, 109, 0.1);
 }
 
-.hidden {
-    display: none;
+/* Buttons */
+button {
+    background-color: #1f4a6d;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    box-shadow: none;
+    border-radius: 0;
+    border: 0;
 }
